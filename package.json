@@ -1,0 +1,28 @@
+{
+  "name": "lt-timer",
+  "version": "1.0.0-beta.1",
+  "description": "little timer",
+  "scripts": {
+    "test": "tap **/_tests/*.js --reporter spec"
+  },
+  "bin": {
+    "lt": "./cli/index.js"
+  },
+  "author": "Ash",
+  "license": "ISC",
+  "repository": "juice49/lt",
+  "dependencies": {
+    "boxen": "^1.1.0",
+    "chalk": "^1.1.3",
+    "env-paths": "^1.0.0",
+    "humanize-duration": "^3.10.0",
+    "level": "^1.6.0",
+    "level-sublevel": "^6.6.1",
+    "meow": "^3.7.0",
+    "mkdirp": "^0.5.1",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "tap": "^10.3.2"
+  }
+}
