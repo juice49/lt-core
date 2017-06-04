@@ -1,5 +1,7 @@
 # lt
 
+<img src='http://i.imgur.com/e5KPnPp.gif' alt='lt demo' width='532' />
+
 lt is a small time tracking library and CLI. It is designed with extensibility
 in mind; either by embedding the library or extending the CLI.
 
