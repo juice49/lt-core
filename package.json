@@ -18,9 +18,13 @@
     "humanize-duration": "^3.10.0",
     "level": "^1.6.0",
     "level-sublevel": "^6.6.1",
+    "lodash.findlast": "^4.6.0",
     "meow": "^3.7.0",
     "mkdirp": "^0.5.1",
-    "through2": "^2.0.3"
+    "parse-duration": "^0.1.1",
+    "through2": "^2.0.3",
+    "through2-filter": "^2.0.0",
+    "through2-map": "^3.0.0"
   },
   "devDependencies": {
     "tap": "^10.3.2"

@@ -10,12 +10,15 @@ const getDb = require('../lib/get-db')(path.join(paths.data, 'db'))
 const commands = [
   'start',
   'stop',
+  'add',
+  'subtract',
   'reset',
   'set',
   'rm',
   'ls',
   'ls',
-  'sum'
+  'sum',
+  'log'
 ]
 
 const cli = meow(`

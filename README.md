@@ -2,7 +2,10 @@
 
 lt start [$id]  
 lt stop  
-lt ls [$id]  
+lt ls [$id]
+lt log
+lt add $id $value  
+lt subtract $id $value
 
 ## todo
 
