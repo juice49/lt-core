@@ -27,6 +27,7 @@
     "through2-map": "^3.0.0"
   },
   "devDependencies": {
+    "shortid": "^2.2.8",
     "tap": "^10.3.2"
   }
 }
