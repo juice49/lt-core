@@ -16,6 +16,8 @@ IndexedDB—so we could probably make it work in browsers, too.
 
 `npm i -g lt-timer`
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ***
 
 # cli usage
