@@ -12,12 +12,8 @@ const commands = [
   'stop',
   'add',
   'subtract',
-  'reset',
-  'set',
   'rm',
   'ls',
-  'ls',
-  'sum',
   'log'
 ]
 
@@ -25,12 +21,12 @@ const cli = meow(`
   Usage
     $ lt
     $ lt start [$id]
-    $ lt stop [$id]
-    $ lt reset [$id]
-    $ lt set $id $value
+    $ lt stop
+    $ lt add $id $value
+    $ lt subtract $id $value
     $ lt rm [$id]
     $ lt ls [$id]
-    $ lt sum
+    $ lt log
 `)
 
 const command = cli.input[0]
