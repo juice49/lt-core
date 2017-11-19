@@ -26,6 +26,7 @@ IndexedDB—so we could probably make it work in browsers, too.
 [lt stop](#lt-stop)  
 [lt add $id $value](#lt-add-id-value)  
 [lt subtract $id $value](#lt-subtract-id-value)  
+[lt rm [$id]](#lt-rm-id)  
 [lt ls [$id]](#lt-ls-id)  
 [lt log](#lt-log)
 
@@ -68,6 +69,16 @@ for example:
 - 4h30m
 
 `lt subtract foo 37m`
+
+## lt rm [$id]
+
+Remove a timer.
+
+If no id is provided, all timers will be removed.
+
+### Flags
+
+- `-f`: Skip confirmation prompt.
 
 ## lt ls [$id]
 
