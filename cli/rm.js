@@ -31,7 +31,7 @@ module.exports = async function ({ getDb, cli }) {
   }
 
   if (all) {
-    console.log('Removed all timers,')
+    console.log('Removed all timers.')
     return
   }
 
