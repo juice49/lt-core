@@ -4,6 +4,7 @@
 const path = require('path')
 const meow = require('meow')
 const envPaths = require('env-paths')
+const chalk = require('chalk')
 const paths = envPaths('lt')
 const getDb = require('../lib/get-db')(path.join(paths.data, 'db'))
 
@@ -32,16 +33,21 @@ const cli = meow(`
 const command = cli.input[0]
 const commandExists = command && commands.includes(command)
 
+const logError = message =>
+  console.error(chalk.red(message))
+
 if (!commandExists) {
-  console.log(`${command} is not a valid command`)
+  logError(`${command} is not a valid command.`)
 }
 
 if (commandExists) {
-  try {
-    require(`./${command}`)({ getDb, cli })
-  } catch (err) {
-    console.log('foo', err.message)
-  }
+  (async () => {
+    try {
+      await require(`./${command}`)({ getDb, cli })
+    } catch (err) {
+      logError(err.message)
+    }
+  })()
 }
 
 if (!commandExists) {
