@@ -3,7 +3,7 @@
   "version": "1.0.0-beta.2",
   "description": "little timer",
   "scripts": {
-    "test": "tap **/_tests/*.js --reporter spec"
+    "test": "tap '**/_tests/*.js' --reporter spec"
   },
   "bin": {
     "lt": "./cli/index.js"
@@ -22,8 +22,10 @@
     "level-sublevel": "^6.6.1",
     "lodash.findlast": "^4.6.0",
     "meow": "^3.7.0",
+    "minigrate": "^1.0.0",
     "mkdirp": "^0.5.1",
     "parse-duration": "^0.1.1",
+    "pify": "^3.0.0",
     "through2": "^2.0.3",
     "through2-filter": "^2.0.0",
     "through2-map": "^3.0.0"
@@ -31,6 +33,6 @@
   "devDependencies": {
     "shortid": "^2.2.8",
     "standard": "^10.0.2",
-    "tap": "^10.3.2"
+    "tap": "^11.0.1"
   }
 }
