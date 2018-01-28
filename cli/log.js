@@ -1,17 +1,21 @@
 'use strict'
 
 const { EOL } = require('os')
-const map = require('through2-map')
+const fun = require('funstream')
 
 module.exports = async function log ({ getDb, cli }) {
   const { main } = await getDb()
 
-  main.createReadStream({ reverse: true, gte: [ 'events' ], lte: [ 'events', undefined ] })
-    .pipe(map.obj(({ key, value }) => {
-      const output = [ key, value ]
-        .filter(data => data !== '')
+  const events = main.createReadStream({
+    reverse: true,
+    gte: [ 'events' ],
+    lte: [ 'events', undefined ]
+  })
 
-      return output.join(': ') + EOL
-    }))
+  await fun(events)
+    .map(({ key, value }) => [ key, value ]
+      .filter(data => data !== '')
+      .join(': ') + EOL
+    )
     .pipe(process.stdout)
 }
