@@ -2,7 +2,7 @@
 
 const { EOL } = require('os')
 const chalk = require('chalk')
-const humanize = require('humanize-duration')
+const prettyMs = require('pretty-ms')
 const boxen = require('boxen')
 const list = require('../lib/list')
 
@@ -17,7 +17,7 @@ module.exports = async function ({ getDb, cli }) {
         ? chalk.green.inverse(timer.id)
         : timer.id
 
-      output.push(`${chalk.bold(title)} ${chalk.gray('•')} ${chalk.dim(humanize(timer.sum))}`)
+      output.push(`${chalk.bold(title)} ${chalk.gray('•')} ${chalk.dim(prettyMs(timer.sum))}`)
     })
     .on('end', () => {
       console.log(
